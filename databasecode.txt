@@ -1,0 +1,18 @@
+CREATE TABLE coords_data (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    notes TEXT,
+    lat DECIMAL(10, 8) NOT NULL,
+    lng DECIMAL(11, 8) NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+//inserting coords
+
+ await fastify.mysql.execute(
+        "INSERT INTO coords_data (lat, lng) VALUES (?, ?)",
+        [Number(latitude), Number(longitude)]
+      );
+
+
