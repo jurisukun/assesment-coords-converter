@@ -2,6 +2,7 @@ import React from "react";
 import Map from "./Map.jsx";
 
 import { useState, useRef } from "react";
+import axios from "axios";
 
 function Form() {
   const latitudeRef = useRef(0);
@@ -64,13 +65,12 @@ function Form() {
 
   function save() {
     axios
-      .post("http://localhost:3001/api/savecoords", { latitude, longitude })
+      .post("http://localhost:3010/api/savecoords", { latitude, longitude })
       .then((res) => {
         if (res.status === 200) alert("Coordinates saved successfully");
       })
       .catch((err) => {
         alert("Error saving coordinates");
-        console.log(err);
       });
   }
   return (
