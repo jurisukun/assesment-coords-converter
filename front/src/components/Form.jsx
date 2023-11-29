@@ -168,7 +168,7 @@ function Form() {
         </div>
       </div>
 
-      <Map />
+      <Map lat={latitude} lang={longitude} />
     </div>
   );
 }
