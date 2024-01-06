@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 function Map({ lat, lang }) {
   const iframeRef = useRef(null);
   return (
-    <div className="bg-white p-4   shadow-sm shadow-slate-500 gap-4 rounded-lg w-full xl:max-w-[300px] relative">
+    <div className="bg-white p-4 flex items-center justify-center  shadow-sm shadow-slate-500 gap-4 rounded-lg w-full xl:max-w-[300px] relative">
       <iframe
         id="locationMap"
         ref={iframeRef}
