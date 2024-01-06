@@ -156,7 +156,7 @@ function Form() {
           </div>
           <div className="w-[40%] flex items-center justify-center">
             <button
-              disabled={!savedCoords}
+              disabled={true}
               onClick={save}
               className={`border-0  text-white p-2 rounded hover:bg-blue-400 whitespace-nowrap  w-[95%] max-w-[150px] md:text-[min(2vw,12px)]  text-[10px] ${
                 savedCoords ? "bg-blue-500" : "bg-blue-400"
